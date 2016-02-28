@@ -4,7 +4,8 @@ IT4GOV είναι ένα project-solution για τον διαγωνισμό IT4
 
 
 Το solution αποτελείτε από 3 projects:
-  1. IT4GOV.IdentityServer
+  1. IdentityServer4
+  2. IT4GOV.IdentityServer
   2. IT4GOV.WebApp
   3. IT4GOV.WebAPI
   
