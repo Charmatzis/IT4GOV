@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IT4GOV.IdentityServer</name>
+    </assembly>
+    <members>
+        <member name="M:IT4GOV.IdentityServer.Extensions.ASPSmsSender.SendMessage(IT4GOV.IdentityServer.Extensions.ASPmsSercetCredentials,System.String,System.String)">
+            <summary>
+            Send an sms message using Twilio REST API
+            </summary>
+            <param name="credentials">TwilioSmsCredentials</param>
+            <param name="toPhoneNumber">E.164 formatted phone number, e.g. +16175551212</param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

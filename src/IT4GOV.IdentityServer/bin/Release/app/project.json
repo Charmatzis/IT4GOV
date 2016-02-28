@@ -1,0 +1,33 @@
+{
+  "userSecretsId": "aspnet5-IT4GOV.IdentityServer-27h34bgh-b396-4015-a420-726d579c2323",
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "IT4GOV.IdentityServer": "1.0.0"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel"
+  },
+  "frameworks": {
+    "dnx451": {},
+    "dnxcore50": {}
+  },
+  "exclude": [
+    "wwwroot",
+    "node_modules"
+  ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "postbuild": [
+      "gulp clean",
+      "gulp min"
+    ]
+  },
+  "entryPoint": "IT4GOV.IdentityServer",
+  "loadable": false
+}

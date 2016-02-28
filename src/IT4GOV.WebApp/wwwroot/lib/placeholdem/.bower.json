@@ -1,0 +1,44 @@
+{
+  "name": "placeholdem",
+  "description": "A JS plugin that animates placeholder carets on inputs and textareas. The value will incrementally delete on focus, and restore on blur.",
+  "version": "1.0.2",
+  "main": "placeholdem.js",
+  "license": "MIT",
+  "ignore": [
+    ".*",
+    "assets/",
+    "*.md",
+    "*.html",
+    "*.json",
+    "gulpfile.js",
+    "CNAME"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "placeholder",
+    "caret",
+    "animation"
+  ],
+  "authors": [
+    {
+      "name": "Jack Rugile",
+      "email": "jack@jackrugile.com",
+      "homepage": "http://jackrugile.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jackrugile/placeholdem.git"
+  },
+  "homepage": "https://github.com/jackrugile/placeholdem",
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "29dc3b2f13d97ed34109cfae2b7986c04053a714"
+  },
+  "_source": "git://github.com/jackrugile/placeholdem.git",
+  "_target": "1.0.2",
+  "_originalSource": "placeholdem"
+}

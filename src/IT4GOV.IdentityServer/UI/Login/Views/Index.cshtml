@@ -1,0 +1,64 @@
+﻿@model IT4GOV.IdentityServer.UI.Login.LoginViewModel
+
+<div class="login-page">
+    <div class="page-header">
+        <h1>Είσοδος</h1>
+    </div>
+
+    @Html.Partial("_ValidationSummary")
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Είσοδος</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form asp-action="Login">
+                        <input type="hidden" asp-for="SignInId" />
+
+                        <fieldset>
+                            <div class="form-group">
+                                <label asp-for="Username"></label>
+                                <input class="form-control" placeholder="Όνομα χρήστη" asp-for="Username" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password"></label>
+                                <input type="password" class="form-control" placeholder="Κωδικός" asp-for="Password" autocomplete="off">
+                            </div>
+                            <div class="form-group login-remember">
+                                <label asp-for="RememberLogin">
+                                    <input asp-for="RememberLogin">
+                                    <strong>Απόθηκευση των πεδίων</strong>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Είσοδος</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                @*<ul class="list-unstyled">
+                        <li ng-repeat="link in model.additionalLinks"><a ng-href="{{link.href}}">{{link.text}}</a></li>
+                    </ul>*@
+            </div>
+        </div>
+
+        @*<div class="col-md-6 col-sm-6 external-providers" ng-show="model.externalProviders.length">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">External Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-inline">
+                            <li ng-repeat="provider in model.externalProviders">
+                                <a class="btn btn-default" href="{{provider.href}}">{{provider.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+</div>

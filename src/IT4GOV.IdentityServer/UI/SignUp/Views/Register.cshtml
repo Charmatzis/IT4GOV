@@ -1,0 +1,167 @@
+﻿@model SignUpModel
+@{
+    ViewData["Title"] = "Εγγραφή";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="SignUp" asp-action="Register" method="post" class="form-horizontal col-md-6" role="form" enctype="multipart/form-data">
+    <h4>Δημιουργία καινούργιου λογαριασμού</h4>
+    <hr />
+
+    <div class="form-group ">
+        <label asp-for="Username" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Username" class="form-control" placeholder="username" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Name" class="form-control" placeholder="π.χ. Παπαδόπουλος" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="GivenName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="GivenName" class="form-control" placeholder="π.χ. Γεώργιος" />
+            <span asp-validation-for="GivenName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FamilyName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="FamilyName" class="form-control" placeholder="π.χ. Ιωάννης" />
+            <span asp-validation-for="FamilyName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BirthDate" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+
+            <input asp-for="BirthDate" class="form-control" />
+
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Address" class="form-control" placeholder="π.χ. Κηφισίας 37, Μαρούσι, 14231" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="PhoneNumber" class="form-control" placeholder="6971111111" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AMKA" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="AMKA" class="form-control" placeholder="11111111111" />
+            <span asp-validation-for="AMKA" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AFM" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="AFM" class="form-control" placeholder="111111111" />
+            <span asp-validation-for="AFM" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AT" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="AT" class="form-control" placeholder="Α1111111" />
+            <span asp-validation-for="AT" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageUpload" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="ImageUpload" class="form-control" data-filename-placement="inside" title="Εύρεση εικόνας">
+
+            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Εγγραφή</button>
+        </div>
+    </div>
+
+    <hr />
+    <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <environment names="Development">
+        <script type="text/javascript" src="~/lib/moment/moment.js"></script>
+        <script type="text/javascript" src="~/lib/moment/locale/el.js"></script>
+        <script type="text/javascript" src="~/lib/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap-file-input/bootstrap.file-input.js"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script type="text/javascript" src="~/lib/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="~/lib/moment/locale/el.js"></script>
+        <script type="text/javascript" src="~/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap-file-input/bootstrap.file-input.min.js"></script>
+    </environment>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('input[type=file]').bootstrapFileInput();
+            $('.file-inputs').bootstrapFileInput();
+            $('#BirthDate').datetimepicker({
+                viewMode: 'days',
+                format: 'DD/MM/YYYY',
+                locale: 'el'
+
+            });
+        });
+    </script>
+
+}
